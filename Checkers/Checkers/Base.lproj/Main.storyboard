@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
+    </dependencies>
+    <scenes>
+        <!--Checker View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CheckerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checker-board" translatesAutoresizingMaskIntoConstraints="NO" id="oDC-dk-ICH" customClass="GridView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wxu-NJ-HRc"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oDC-dk-ICH" secondAttribute="bottom" id="TIh-Ue-1tQ"/>
+                            <constraint firstAttribute="trailing" secondItem="oDC-dk-ICH" secondAttribute="trailing" id="TrF-9d-AVa"/>
+                            <constraint firstItem="oDC-dk-ICH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bsj-D0-gst"/>
+                            <constraint firstItem="oDC-dk-ICH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="th3-Wo-hB7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gridView" destination="oDC-dk-ICH" id="d3v-wI-x2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checker-board" width="400" height="400"/>
+    </resources>
+</document>
